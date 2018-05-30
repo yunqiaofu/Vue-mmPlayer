@@ -10,7 +10,7 @@
             </div>
             <lyric class="music-right" :lyric="lyric" :nolyric="nolyric" :lyricIndex="lyricIndex"/>
         </div>
-        
+
         <!--播放器-->
         <div class="music-bar" :class="{disable:!musicReady||!currentMusic.id}">
             <div class="music-bar-btns">
@@ -24,7 +24,7 @@
                     <template v-if="currentMusic&&currentMusic.id">
                         {{currentMusic.name}}<span> - {{currentMusic.singer}}</span>
                     </template>
-                    <template v-else>欢迎使用mmPlayer在线音乐播放器</template>
+                    <template v-else>欢迎使用小康在线音乐播放器</template>
                 </div>
                 <div class="music-bar-time" v-if="currentMusic.id">{{currentTime | format}}/{{currentMusic.duration |
                     formatDuration}}
@@ -39,7 +39,7 @@
                 <mm-progress @percentChange="volumeChange" :percent="volume"/>
             </div>
         </div>
-        
+
         <!--遮罩-->
         <div class="mmPlayer-bg" :style="{backgroundImage: picUrl}"></div>
         <div class="mmPlayer-mask"></div>
@@ -56,7 +56,7 @@
     import Lyric from 'components/lyric/lyric'
     import MmProgress from 'base/mm-progress/mm-progress'
     import MmDialog from 'base/mm-dialog/mm-dialog'
-    
+
     export default {
         name: "music",
         components: {
@@ -358,7 +358,7 @@
 
 <style lang="less">
     @import "~assets/css/var";
-    
+
     .music {
         padding: 75px 25px 25px 25px;
         width: 100%;
@@ -385,7 +385,7 @@
                 margin-left: 10px;
             }
         }
-        
+
         /*底部mmPlayer-bar*/
         .music-bar {
             display: flex;
@@ -501,7 +501,7 @@
                         position: absolute;
                         top: -4px;
                     }
-                    
+
                     .mmProgress {
                         margin-left: 30px;
                     }
@@ -513,7 +513,7 @@
                 }
             }
         }
-        
+
         /*遮罩*/
         .mmPlayer-mask, .mmPlayer-bg {
             position: absolute;
@@ -522,12 +522,12 @@
             left: 0;
             bottom: 0;
         }
-        
+
         .mmPlayer-mask {
             z-index: -1;
             background-color: @mask_color;
         }
-        
+
         .mmPlayer-bg {
             z-index: -2;
             background-repeat: no-repeat;
@@ -538,7 +538,7 @@
             transform: translateZ(0);
             transition: all .8s;
         }
-        
+
         //当屏幕小于960时
         @media (max-width: 960px) {
             .music-right {
@@ -550,13 +550,13 @@
             & {
                 padding: 75px 15px 5px 15px
             }
-            
+
             .music-content .music-left {
                 .music-list {
                     font-size: @font_size_medium;
                 }
             }
-            
+
             .music-bar {
                 .music-bar-info span, .music-bar-volume .mmProgress {
                     display: none;

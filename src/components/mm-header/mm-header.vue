@@ -1,7 +1,7 @@
 <template>
     <!--头部-->
     <header class="mm-header">
-        <h1 class="header">mmPlayer在线音乐播放器</h1>
+        <h1 class="header">小康在线音乐播放器</h1>
         <dl class="user">
             <template v-if="user.userId">
                 <router-link class="user-info" to="/music/userlist" tag="dt">
@@ -38,7 +38,7 @@
     import {getUserPlaylist} from 'api'
     import {mapGetters, mapActions} from 'vuex'
     import MmDialog from 'base/mm-dialog/mm-dialog'
-    
+
     export default {
         name: "mm-header",
         components: {
@@ -111,7 +111,7 @@
 
 <style lang="less">
     @import "~assets/css/var";
-    
+
     .mm-header {
         position: absolute;
         top: 0;

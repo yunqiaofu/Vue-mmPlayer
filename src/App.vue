@@ -3,10 +3,10 @@
         <!--主体-->
         <mm-header/>
         <router-view class="router-view"/>
-        
+
         <!--更新说明-->
-        <mm-dialog ref="versionDialog" :dialogType="1" headText="更新提示" :bodyText="versionBody"/>
-        
+        <!--<mm-dialog ref="versionDialog" :dialogType="1" headText="更新提示" :bodyText="versionBody"/>-->
+
         <!--播放器-->
         <audio ref="mmPlayer"></audio>
     </div>
@@ -18,7 +18,7 @@
     import MmHeader from 'components/mm-header/mm-header'
     import MmDialog from 'base/mm-dialog/mm-dialog'
     import {getVersion, setVersion} from "assets/js/storage";
-    
+
     export default {
         name: "app",
         components: {
@@ -84,7 +84,7 @@
 
 <style lang="less">
     @import "~assets/css/var";
-    
+
     #app {
         position: relative;
         width: 100%;
