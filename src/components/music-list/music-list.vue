@@ -112,14 +112,15 @@
                     this.setPlaying(false);
                     return
                 }
-                getMusicUrl(item.id)
-                    .then(res => {
-                        if (!res.data.data[0].url) {
-                            this.$mmToast('当前音乐无法播放，请播放其他音乐')
-                        } else {
-                            this.$emit('select', item, index)//触发点击播放事件
-                        }
-                    });
+                 this.$emit('select', item, index)//触发点击播放事件
+                // getMusicUrl(item.id)
+                //     .then(res => {
+                //         if (!res.data.data[0].url) {
+                //             this.$mmToast('当前音乐无法播放，请播放其他音乐')
+                //         } else {
+                //             this.$emit('select', item, index)//触发点击播放事件
+                //         }
+                //     });
             },
             // 删除事件
             deleteItem(index) {

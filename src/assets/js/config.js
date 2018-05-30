@@ -1,5 +1,5 @@
 // 网络请求地址
-export const URL = 'http://localhost:3000';
+export const URL = 'http://35.203.187.94:3000';
 
 /**
  * 默认歌单ID （正在播放列表）
