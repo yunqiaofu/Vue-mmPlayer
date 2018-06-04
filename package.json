@@ -2,7 +2,7 @@
   "name": "player",
   "version": "1.5.2",
   "description": "Online music player",
-  "author": "maomao1996 <1714487678@qq.com>",
+  "author": "",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",

@@ -5,7 +5,7 @@
         <div class="search-head">
             <span v-for="(item,index) in Artists.slice(0,5)" :key="index"
                   @click="clickHot(item.first)">{{item.first}}</span>
-            <input class="search-input" type="text" placeholder="音乐/歌手" v-model.trim="searchValue"
+            <input class="search-input" type="text" placeholder="请输入音乐/歌手/专辑" autofocus="autofocus" v-model.trim="searchValue"
                    @keyup.enter="onEnter">
         </div>
         <music-list ref="musicList" :list="list" :listType="2" @select="selectItem" @pullUp="pullUpLoad"/>
@@ -19,7 +19,7 @@
     import MmLoading from 'base/mm-loading/mm-loading'
     import MusicList from 'components/music-list/music-list'
     import {loadMixin} from "assets/js/mixin";
-    
+
     export default {
         name: "search",
         mixins: [loadMixin],
@@ -126,7 +126,7 @@
 
 <style lang="less" scoped>
     @import "~assets/css/var";
-    
+
     .search {
         position: relative;
         width: 100%;
@@ -154,13 +154,13 @@
                 flex: 1;
                 height: 40px;
                 box-sizing: border-box;
-                padding: 0 15px;
-                border: 1px solid @btn_color;
+                padding: 0 30px;
+                border: 0px solid @btn_color;
                 outline: 0;
                 background: transparent;
                 color: @text_color_active;
                 font-size: @font_size_medium;
-                box-shadow: 0 0 1px 0 #fff inset;
+                box-shadow: 0 0 0px 0 #fff inset;
                 &::placeholder {
                     color: @text_color;
                 }
