@@ -5,10 +5,6 @@ Vue.use(Router);
 const routes = [
     {
         path: "/",
-        redirect: "/music"
-    },
-    {
-        path: "/music",
         component: () => import("pages/music"),
         redirect: "/music/playlist",
         children: [

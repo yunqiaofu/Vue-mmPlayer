@@ -46,9 +46,9 @@ Vue.config.productionTip = isDebug_mode;
 
 // 版权信息
 const pkg = require('../package.json');
-window.mmPlayer = window.mmplayer = `欢迎使用 !
+window.mmPlayer = window.mmplayer = `欢迎使用小康音乐🎵!
 歌曲来源于网易云音乐 (http://music.163.com)`;
-console.info(`%c${mmPlayer}`, `color:blue`);
+console.info(`%c${mmPlayer}`, `color:rgba(230,69,179)`);
 
 /* eslint-disable no-new */
 new Vue({
