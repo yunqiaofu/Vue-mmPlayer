@@ -2,7 +2,7 @@
     <div>
         <!--封面-->
         <dl class="music-info">
-            <dt>
+            <dt @click="showLyric()">
                 <img :src="musicPicUrl" />
             </dt>
             <template v-if="currentMusic.id">
@@ -16,11 +16,11 @@
             </template>
         </dl>
         <!--歌词-->
-        <div class="music-lyric" ref="musicLyric">
+        <div class="music-lyric" ref="musicLyric" @click="showLyric()">
             <div class="music-lyric-items" :style="lyricTop">
                 <p v-if="!currentMusic.id">还没有播放音乐哦！</p>
                 <p v-else-if="nolyric">暂无歌词！</p>
-                <template v-else-if="lyric.length>0">
+                <template v-else-if="lyric.length>0" >
                     <p :class="{on:lyricIndex===index}" v-for="(item,index) in lyric" :key="index">{{item.text}}</p>
                 </template>
                 <p v-else>歌词加载失败！</p>
@@ -79,6 +79,9 @@
             clacTop(){
                 let height = this.$refs.musicLyric.offsetHeight;
                 this.top = Math.floor(height / 34 / 2)
+            },
+            showLyric(){
+              this.$emit("changeWidth",true)
             }
         }
     }

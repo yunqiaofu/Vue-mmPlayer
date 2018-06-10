@@ -66,13 +66,12 @@ export default {
     versionBody () {
       return `<div class="mm-dialog-text text-left">
 版本号：${pkg.version}<br/>
-1、 路由直访问报错<br>
-2、 新增title提示<br>
+1、 解决某人刷新路由直访问报错<br>
+2、 新增歌词全屏上帝视角<br>
 3、 新增歌曲缓冲进度<br>
-4、 新增热门歌单<br>
-5、 新增图片懒加载<br>
-6、 修改热搜展示数据<br>
-7、 优化已知问题
+4、 新增图片懒加载<br>
+5、 修改热搜展示数据<br>
+6、 优化已知问题
 </div>`
     }
   },

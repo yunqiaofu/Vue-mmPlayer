@@ -8,11 +8,11 @@
         </keep-alive>
         <router-view :key="$route.path" v-if="!$route.meta.keepAlive" class="music-list" />
       </div>
-      <lyric class="music-right" :lyric="lyric" :nolyric="nolyric" :lyricIndex="lyricIndex" />
+      <lyric :class="widthBig?'big-right':'music-right'" :lyric="lyric" :nolyric="nolyric" :lyricIndex="lyricIndex" @changeWidth="getStatus" />
     </div>
 
     <!--播放器-->
-    <div class="music-bar" :class="{disable:!musicReady||!currentMusic.id}">
+    <div class="music-bar" :class="{disable:!musicReady||!currentMusic.id}" :style="widthBig?'display:none;':''">
       <div class="music-bar-btns">
         <i class="bar-icon btn-prev" title="上一曲 Ctrl + Left" @click="prev"></i>
         <i class="bar-icon btn-play" :class="{'btn-play-pause':playing}" title="播放暂停 Ctrl + Space" @click="play"></i>
@@ -73,6 +73,7 @@ export default {
       lyricIndex: 0,//当前播放歌词下标
       isMute: false,//是否静音
       volume: 1,//默认音量大小
+      widthBig: false//是否展开
     }
   },
   mounted () {
@@ -313,6 +314,10 @@ export default {
       this.isMute = !this.isMute;
       this.isMute ? audio.volume = 0 : audio.volume = this.volume
     },
+    // 展开歌词
+    getStatus (val) {
+      this.widthBig = !this.widthBig;
+    },
     //获取歌词
     _getLyric (id) {
       getLyric(id).then((res) => {
@@ -380,6 +385,11 @@ export default {
     .music-right {
       position: relative;
       width: 310px;
+      margin-left: 10px;
+    }
+    .big-right {
+      width: 100%;
+      position: relative;
       margin-left: 10px;
     }
   }
