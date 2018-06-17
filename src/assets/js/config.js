@@ -35,7 +35,7 @@ export const defaultSheetId = 1;
 export const defaultLimit = 30;
 
 // 默认背景图
-export const defaultBG = 'http://cdn.mtnhao.com/music/bg.jpg';
+export const defaultBG = 'http://www.jixiaokang.com/wp-content/uploads/2018/06/NwBx723XaHw.jpg';
 
 /**
  * 播放模式
