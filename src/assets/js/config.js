@@ -34,8 +34,8 @@ export const defaultSheetId = 1;
 // 默认分页数量
 export const defaultLimit = 30;
 
-// 默认背景图
-export const defaultBG = 'http://www.jixiaokang.com/wp-content/uploads/2018/06/NwBx723XaHw.jpg';
+// 默认背景图url("http://3.img.dianjiangla.com/zhinengjiaju/Intelligence/pub/images/life/room3.jpg") 100%
+export const defaultBG = 'http://3.img.dianjiangla.com/zhinengjiaju/Intelligence/pub/images/life/room3.jpg';
 
 /**
  * 播放模式

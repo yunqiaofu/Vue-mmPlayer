@@ -31,7 +31,6 @@
             getPlaylistDetail(this.$route.params.id)
             .then((res) => {
                 if (res.data.code === 200) {
-                  console.log(11111,res.data)
                     this.list = formatSongs(res.data.result.tracks);
                     document.title = `${res.data.result.name} - 在线音乐播放器`;
                     this._hideLoad()

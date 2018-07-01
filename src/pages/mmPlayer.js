@@ -1,4 +1,6 @@
-import {playMode} from "assets/js/config";
+import {
+    playMode
+} from "assets/js/config";
 
 const mmPlayerMusic = {
     initAudio(that) {
@@ -14,7 +16,7 @@ const mmPlayerMusic = {
                     that.currentProgress = buffered / duration;
                 }
             } catch (e) {
-            
+
             }
         };
         //开始播放音乐
@@ -45,7 +47,7 @@ const mmPlayerMusic = {
         };
         //音乐进度拖动大于加载时重载音乐
         ele.onstalled = () => {
-            ele.load();
+            ele.onprogress();
             that.setPlaying(false);
             let timer;
             clearTimeout(timer);

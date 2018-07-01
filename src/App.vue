@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <!--主体-->
-    <mm-header/>{{this.currentMusic}}
+    <mm-header/> {{this.currentMusic}}
     <router-view class="router-view" />
 
     <!--更新说明-->
@@ -66,9 +66,9 @@ export default {
     versionBody () {
       return `<div class="mm-dialog-text text-left">
 版本号：${pkg.version}<br/>
-1、 热门歌单修改<br>
-2、 新增排行榜<br>
-3、 优化背景
+1、 新增点击头部全屏<br>
+2、 新增电台<br>
+3、 优化背景，优化歌词
 </div>`
     }
   },
