@@ -34,7 +34,7 @@ const routes = [{
             }
         },
         {
-            path: "/music/leaderboard", //推荐列表
+            path: "/music/leaderboard", //排行榜
             component: () =>
                 import ("pages/leaderboard/leaderboard"),
             meta: {
@@ -70,6 +70,14 @@ const routes = [{
                 import ("pages/comment/comment"),
             meta: {
                 title: "评论详情"
+            }
+        },
+        {
+            path: "/music/transceiver", //音乐电台
+            component: () =>
+                import ("pages/transceiver/transceiver"),
+            meta: {
+                title: "电台"
             }
         }
     ]
